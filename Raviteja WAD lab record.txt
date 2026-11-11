@@ -1,0 +1,704 @@
+﻿
+1. Write a JavaScript program to perform arithmetic operations on two numbers.
+
+<!DOCTYPE html>
+<html>
+<head>
+
+<title>Arithmetic Operations</title>
+<style>
+
+body {
+font-family: Arial;
+text-align: center;
+margin-top: 50px;
+}
+input, button {
+padding: 8px;
+margin: 5px;
+}
+#result {
+margin-top: 20px;
+font-size: 18px;
+}
+</style>
+</head>
+<body>
+
+<h2>Arithmetic Operations</h2>
+
+<input type="number" id="num1" placeholder="First Number">
+<input type="number" id="num2" placeholder="Second Number">
+<br>
+
+<button onclick="calculate()">Calculate</button>
+<div id="result"></div>
+
+<script>
+function calculate() {
+
+let a = Number(document.getElementById("num1").value); let b = Number(document.getElementById("num2").value); document.getElementById("result").innerHTML = "Addition = " + (a + b) + "<br>" +
+
+"Subtraction = " + (a - b) + "<br>" +
+"Multiplication = " + (a * b) + "<br>" +
+
+"Division = " + (b != 0 ? a / b : "Cannot divide by zero"); }
+
+</script>
+</body>
+</html>
+
+Output :
+
+2. Write a JavaScript program to demonstrate conditional statements and looping statements.
+
+<!DOCTYPE html>
+<html>
+<head>
+
+<title>Conditional and Looping Statements</title>
+<style>
+
+body {
+font-family: Arial;
+text-align: center;
+margin-top: 50px;
+}
+button {
+padding: 10px;
+}
+#output {
+margin-top: 20px;
+font-size: 18px;
+}
+</style>
+</head>
+<body>
+
+<h2>Conditional and Looping Statements</h2>
+<button onclick="show()">Run Program</button>
+<div id="output"></div>
+
+<script>
+function show() {
+let age = 20;
+let text = "";
+
+if (age >= 18) {
+
+text = "Eligible to Vote<br><br>";
+} else {
+
+text = "Not Eligible to Vote<br><br>";
+}
+
+text += "Numbers from 1 to 5:<br>";
+for (let i = 1; i <= 5; i++) {
+
+text += i + " ";
+}
+
+document.getElementById("output").innerHTML = text; }
+
+</script>
+</body>
+</html>
+
+Output :
+
+3. Write a JavaScript program using alert(), prompt() and confirm() functions. 
+<!DOCTYPE html>
+
+<html>
+<head>
+
+<title>Alert Prompt Confirm</title>
+<style>
+
+body {
+font-family: Arial;
+text-align: center;
+margin-top: 60px;
+}
+button {
+padding: 10px 20px;
+}
+</style>
+</head>
+<body>
+
+<h2>Alert, Prompt and Confirm</h2>
+
+<button onclick="demo()">Click Here</button>
+<script>
+
+function demo() {
+alert("Welcome!");
+
+let name = prompt("Enter your name:");
+if (name == null || name == "") {
+alert("You did not enter your name.");
+return;
+
+}
+
+let answer = confirm("Are you a student?");
+if (answer) {
+
+alert("Hello " + name + ", Welcome Student!"); } else {
+
+alert("Hello " + name);
+}
+}
+</script>
+</body>
+</html>
+
+Output :
+
+4. Write a JavaScript program to find factorial and Fibonacci series using functions.
+
+<!DOCTYPE html>
+<html>
+<head>
+
+<title>Factorial and Fibonacci</title>
+<style>
+
+body {
+font-family: Arial;
+text-align: center;
+margin-top: 50px;
+}
+input, button {
+padding: 8px;
+margin: 5px;
+}
+#result {
+margin-top: 20px;
+font-size: 18px;
+}
+</style>
+</head>
+<body>
+
+<h2>Factorial and Fibonacci</h2>
+
+<input type="number" id="num" placeholder="Enter Number"> <button onclick="show()">Show</button>
+
+<div id="result"></div>
+<script>
+
+function factorial(n)
+{
+let fact = 1;
+
+for (let i = 1; i <= n; i++) {
+fact = fact * i;
+
+}
+return fact;
+}
+function fibonacci(n) {
+let a = 0;
+let b = 1;
+let series = "";
+
+for (let i = 1; i <= n; i++) {
+series += a + " ";
+
+let c = a + b;
+a = b;
+b = c;
+}
+return series;
+}
+function show() {
+
+let n = Number(document.getElementById("num").value); if (n < 0) { document.getElementById("result").innerHTML = "Please enter a positive number.";
+
+return;
+} document.getElementById("result").innerHTML = "Factorial = " + factorial(n) + "<br><br>" +
+
+"Fibonacci Series = " + fibonacci(n); }
+
+</script>
+</body>
+</html>
+
+Output:
+
+5. Write a JavaScript program to validate a login form using events and form validation.
+
+<!DOCTYPE html>
+<html>
+<head>
+
+<title>Login Form Validation</title>
+<style>
+
+body {
+font-family: Arial;
+text-align: center;
+margin-top: 50px;
+}
+input {
+padding: 10px;
+margin: 5px;
+}
+button {
+padding: 10px 25px;
+margin-top: 5px;
+}
+</style>
+</head>
+<body>
+<h2>Login Form</h2>
+
+<form onsubmit="return validate()">
+
+<input type="text" id="username" placeholder="Username">
+<br>
+
+<input type="password" id="password" placeholder="Password">
+
+<br>
+
+<button type="submit">Login</button>
+</form>
+
+<script>
+function validate() {
+
+let username = document.getElementById("username").value; let password = document.getElementById("password").value; if (username == "" || password == "") {
+
+alert("Please fill all fields.");
+return false;
+
+}
+
+if (password.length < 6) {
+
+alert("Password must contain at least 6 characters."); return false;
+
+}
+
+alert("Login Successful!");
+return false;
+
+}
+</script>
+</body>
+</html>
+Output:
+
+6. Write a JavaScript program to demonstrate string and array objects.
+
+<!DOCTYPE html>
+<html>
+<head>
+
+<title>String and Array Objects</title>
+<style>
+
+body {
+font-family: Arial;
+text-align: center;
+margin-top: 50px;
+}
+button {
+padding: 10px 20px;
+}
+#output {
+margin-top: 20px;
+font-size: 18px;
+}
+</style>
+</head>
+<body>
+
+<h2>String and Array Objects</h2>
+
+<button onclick="show()">Show Details</button>
+<div id="output"></div>
+
+<script>
+function show() {
+let name = "JavaScript";
+
+let fruits = ["Apple", "Mango", "Orange"];
+
+document.getElementById("output").innerHTML = "String = " + name + "<br>" +
+
+"String Length = " + name.length + "<br><br>" + "Array = " + fruits.join(", ") + "<br>" +
+
+"First Element = " + fruits[0] + "<br>" + "Array Length = " + fruits.length;
+
+}
+</script>
+</body>
+</html>
+Output:
+
+7. Write a JavaScript program to display current date and time using Date object.
+
+<!DOCTYPE html>
+<html>
+<head>
+
+<title>Current Date and Time</title>
+<style>
+
+body {
+font-family: Arial;
+text-align: center;
+margin-top: 60px;
+}
+button {
+padding: 10px 20px;
+}
+#result {
+margin-top: 20px;
+font-size: 20px;
+}
+</style>
+</head>
+<body>
+
+<h2>Current Date and Time</h2>
+
+<button onclick="showDateTime()">Show Date & Time</button> <div id="result"></div>
+
+<script>
+
+function showDateTime() {
+let date = new Date();
+document.getElementById("result").innerHTML =
+
+"Date: " + date.toDateString() + "<br><br>" + "Time: " + date.toLocaleTimeString();
+
+}
+</script>
+</body>
+</html>
+Output:
+
+8.Create a PHP program to display student information using echo and print statements.
+
+<?php
+
+echo "<h2>Student Information</h2>";
+echo "Student Name: Rahul Kumar<br>";
+echo "Roll Number: 101<br>";
+
+echo "Course: BCA<br>";
+print "Semester: V<br>";
+
+print "College: ABC College<br>";
+print "Age: 20<br>";
+
+?>
+Output:
+
+9. Write a PHP Program to Demonstrate Operators, Conditional Statements and Loops.
+
+<?php
+$a = 10;
+$b = 5;
+
+echo "Addition = " . ($a + $b) . "<br>";
+echo "Subtraction = " . ($a - $b) . "<br>";
+echo "Multiplication = " . ($a * $b) . "<br>";
+if ($a > $b)
+
+{
+
+echo "A is greater than B<br>";
+}
+
+else
+{
+
+echo "B is greater than A<br>";
+}
+
+echo "Numbers from 1 to 5:<br>";
+for ($i = 1; $i <= 5; $i++) {
+
+echo $i . "<br>";
+}
+?>
+Output:
+
+10.Write a PHP program using user defined functions to perform mathematical operations.
+
+<?php
+function add($a, $b) {
+
+return $a + $b;
+
+}
+
+function subtract($a, $b) {
+
+return $a - $b;
+
+}
+
+function multiply($a, $b) {
+
+return $a * $b;
+
+}
+function divide($a, $b) {
+
+if ($b == 0)
+
+return "Cannot divide by zero";
+return $a / $b;
+
+}
+$num1 = 20;
+$num2 = 10;
+
+echo "First Number: $num1<br>";
+
+echo "Second Number: $num2<br><br>";
+
+echo "Addition: " . add($num1, $num2) . "<br>";
+
+echo "Subtraction: " . subtract($num1, $num2) . "<br>";
+echo "Multiplication: " . multiply($num1, $num2) . "<br>";
+echo "Division: " . divide($num1, $num2);
+
+?>
+
+Output:
+
+11 . Write a PHP program to demonstrate array constructs and foreach loop.
+
+<?php
+$students = array(
+
+"Rahul",
+"Priya",
+"Amit",
+"Sneha",
+"Kiran",
+"Anjali",
+"Rohit",
+"Divya"
+
+);
+
+echo "<h2>Student Details</h2>";
+echo "List of Students:<br><br>";
+foreach ($students as $student) {
+
+echo "Student Name: " . $student . "<br>";
+}
+
+echo "<br>Total Number of Students: " . count($students);
+?>
+
+Output:
+
+12. Write a PHP program to perform string operations using built-in string functions
+
+<?php
+$str = "Hello World";
+$str2 = "Welcome to PHP";
+
+echo "<h2>String Operations</h2>";
+echo "Original String: " . $str . "<br>";
+echo "String Length: " . strlen($str) . "<br>";
+
+echo "Word Count: " . str_word_count($str) . "<br>";
+echo "Reverse String: " . strrev($str) . "<br>";
+
+echo "Uppercase: " . strtoupper($str) . "<br>";
+echo "Lowercase: " . strtolower($str) . "<br>";
+
+echo "Replace String: " . str_replace("World", "PHP", $str) . "<br>"; echo "Position of World: " . strpos($str, "World") . "<br>";
+
+echo "Concatenated String: " . $str . " " . $str2 . "<br>";
+echo "First 5 Characters: " . substr($str, 0, 5) . "<br>";
+?>
+
+Output:
+
+13. Write a PHP program to create and use cookies and sessions.
+
+<?php
+session_start();
+
+setcookie("username", "Rahul", time() + 3600, "/"); $_SESSION["username"] = "Rahul"; $_SESSION["course"] = "BCA";
+
+echo "<h2>Cookies and Sessions</h2>";
+echo "<h3>Cookie Information</h3>";
+if (isset($_COOKIE["username"]))
+
+{
+
+echo "Username: " . $_COOKIE["username"] . "<br>"; }
+
+else
+{
+
+echo "Cookie created successfully.<br>";
+
+echo "Refresh the page to view the cookie.<br>";
+
+}
+
+echo "<h3>Session Information</h3>";
+
+echo "Username: " . $_SESSION["username"] . "<br>"; echo "Course: " . $_SESSION["course"] . "<br>";
+
+?>
+Output:
+
+14.Write a PHP program to demonstrate GET and POST methods.
+
+<!DOCTYPE html>
+<html>
+<head>
+
+<title>GET and POST Methods</title>
+</head>
+
+<body>
+<h2>GET Method</h2>
+
+<form method="GET" action="">
+Enter Name:
+
+<input type="text" name="name" required>
+<input type="submit" value="Submit GET">
+</form>
+
+<?php
+
+if (isset($_GET["name"])) {
+
+echo "Name: " . htmlspecialchars($_GET["name"]) . "<br>";
+
+}
+?>
+<hr>
+
+<h2>POST Method</h2>
+
+<form method="POST" action="">
+Enter Course:
+
+<input type="text" name="course" required>
+<input type="submit" value="Submit POST">
+</form>
+
+<?php
+
+if (isset($_POST["course"])) {
+
+echo "Course: " . htmlspecialchars($_POST["course"]) . "<br>"; }
+
+?>
+</body>
+</html>
+
+Output:
+
+15. Develop a simple mini web application using PHP to create a Student Registration System
+
+<!DOCTYPE html>
+<html>
+<head>
+
+<title>Student Registration</title>
+<style>
+
+body {
+
+font-family: Arial, sans-serif;
+background-color: #eaf2f8;
+margin: 0;
+
+padding: 30px;
+}
+.container {
+width: 350px;
+margin: auto;
+background-color: white;
+padding: 25px;
+border-radius: 10px;
+box-shadow: 0 0 10px gray;
+}
+
+h2 {
+text-align: center;
+color: #1565c0;
+}
+label {
+display: block;
+margin-top: 12px;
+
+font-weight: bold;
+}
+input, select {
+width: 100%;
+padding: 9px;
+margin-top: 5px; box-sizing: border-box;
+}
+input[type="submit"] { background-color: #1565c0; color: white;
+
+border: none;
+margin-top: 20px;
+cursor: pointer; border-radius: 5px;
+} input[type="submit"]:hover { background-color: #0d47a1; }
+
+.result {
+margin-top: 20px; padding: 15px; background-color: #e8f5e9; border-radius: 5px;
+
+}
+</style>
+</head>
+<body>
+<div class="container">
+
+<h2>Student Registration</h2>
+<form method="POST" action="">
+<label>Student Name:</label>
+
+<input type="text" name="name" required> <label>Roll Number:</label>
+
+<input type="text" name="rollno" required> <label>Course:</label>
+
+<select name="course" required>
+<option value="">Select Course</option>
+<option value="BCA">BCA</option>
+<option value="BSc">BSc</option>
+<option value="BCom">BCom</option>
+<option value="BA">BA</option>
+</select>
+
+<label>Email:</label>
+
+<input type="email" name="email" required>
+
+<input type="submit" name="submit" value="Register"> </form>
+
+<?php
+
+if (isset($_POST["submit"])) {
+
+$name = htmlspecialchars($_POST["name"]); $rollno = htmlspecialchars($_POST["rollno"]); $course = htmlspecialchars($_POST["course"]); $email = htmlspecialchars($_POST["email"]); echo "<div class='result'>";
+
+echo "<h2>Registration Successful</h2>"; echo "Student Name: " . $name . "<br><br>"; echo "Roll Number: " . $rollno . "<br><br>"; echo "Course: " . $course . "<br><br>";
+
+echo "Email: " . $email; echo "</div>";
+}
+?>
+</div>
+</body>
+</html>
+Output:
