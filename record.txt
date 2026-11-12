@@ -1,4 +1,4 @@
-﻿
+==========================================================================================================================================﻿
 1. Write a JavaScript program to perform arithmetic operations on two numbers.
 
 <!DOCTYPE html>
@@ -48,7 +48,7 @@ let a = Number(document.getElementById("num1").value); let b = Number(document.g
 </body>
 </html>
 
-Output :
+==========================================================================================================================================
 
 2. Write a JavaScript program to demonstrate conditional statements and looping statements.
 
@@ -104,7 +104,7 @@ document.getElementById("output").innerHTML = text; }
 </body>
 </html>
 
-Output :
+==========================================================================================================================================:
 
 3. Write a JavaScript program using alert(), prompt() and confirm() functions. 
 <!DOCTYPE html>
@@ -154,7 +154,7 @@ alert("Hello " + name);
 </body>
 </html>
 
-Output :
+==========================================================================================================================================
 
 4. Write a JavaScript program to find factorial and Fibonacci series using functions.
 
@@ -226,7 +226,7 @@ return;
 </body>
 </html>
 
-Output:
+==========================================================================================================================================
 
 5. Write a JavaScript program to validate a login form using events and form validation.
 
@@ -290,8 +290,7 @@ return false;
 </script>
 </body>
 </html>
-Output:
-
+==========================================================================================================================================
 6. Write a JavaScript program to demonstrate string and array objects.
 
 <!DOCTYPE html>
@@ -338,7 +337,7 @@ document.getElementById("output").innerHTML = "String = " + name + "<br>" +
 </script>
 </body>
 </html>
-Output:
+==========================================================================================================================================
 
 7. Write a JavaScript program to display current date and time using Date object.
 
@@ -381,7 +380,7 @@ document.getElementById("result").innerHTML =
 </script>
 </body>
 </html>
-Output:
+==========================================================================================================================================
 
 8.Create a PHP program to display student information using echo and print statements.
 
@@ -398,8 +397,7 @@ print "College: ABC College<br>";
 print "Age: 20<br>";
 
 ?>
-Output:
-
+==========================================================================================================================================
 9. Write a PHP Program to Demonstrate Operators, Conditional Statements and Loops.
 
 <?php
@@ -428,8 +426,7 @@ for ($i = 1; $i <= 5; $i++) {
 echo $i . "<br>";
 }
 ?>
-Output:
-
+==========================================================================================================================================
 10.Write a PHP program using user defined functions to perform mathematical operations.
 
 <?php
@@ -473,7 +470,7 @@ echo "Division: " . divide($num1, $num2);
 
 ?>
 
-Output:
+==========================================================================================================================================
 
 11 . Write a PHP program to demonstrate array constructs and foreach loop.
 
@@ -501,7 +498,7 @@ echo "Student Name: " . $student . "<br>";
 echo "<br>Total Number of Students: " . count($students);
 ?>
 
-Output:
+==========================================================================================================================================
 
 12. Write a PHP program to perform string operations using built-in string functions
 
@@ -525,7 +522,7 @@ echo "Concatenated String: " . $str . " " . $str2 . "<br>";
 echo "First 5 Characters: " . substr($str, 0, 5) . "<br>";
 ?>
 
-Output:
+==========================================================================================================================================
 
 13. Write a PHP program to create and use cookies and sessions.
 
@@ -556,7 +553,7 @@ echo "<h3>Session Information</h3>";
 echo "Username: " . $_SESSION["username"] . "<br>"; echo "Course: " . $_SESSION["course"] . "<br>";
 
 ?>
-Output:
+==========================================================================================================================================
 
 14.Write a PHP program to demonstrate GET and POST methods.
 
@@ -606,8 +603,7 @@ echo "Course: " . htmlspecialchars($_POST["course"]) . "<br>"; }
 </body>
 </html>
 
-Output:
-
+==========================================================================================================================================
 15. Develop a simple mini web application using PHP to create a Student Registration System
 
 <!DOCTYPE html>
